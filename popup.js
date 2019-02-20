@@ -9,17 +9,9 @@ function getTitle(htmlCode){
   if(typeof(doc)==='undefined') {
     return "parser failed";
   }
-  test="<p id=\"demo\" onclick=\"myFunction()\">Click me to change my HTML content (innerHTML).</p>"
-  doc = new DOMParser().parseFromString(test, "text/html")
 
-return "Penis "+ doc.getElementById("demo").innerHTML;
+  return "Penis "+ doc.getElementById("PopupContentContainer").innerHTML;
 }
-  // test = "<div class="editable-div" contentEditable="true">Hey</div>"
-  // doc = new DOMParser().parseFromString(htmlCode, "text/html");
-
-  // $('.editable-div').html()
-  // return doc.getElementsByClassName("ui-dialog-title").innerHTML;
-  // return doc.firstChild.innerText;
 
   function onWindowLoad() {
   
