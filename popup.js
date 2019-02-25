@@ -1,10 +1,19 @@
+var siteUrl;
+
+document.addEventListener('DOMContentLoaded', () => {
+  chrome.tabs.getSelected(null, function (tab) {
+  siteUrl = tab.url;
+});
+});
+
 chrome.runtime.onMessage.addListener(function (request, sender) {
   if (request.action == "getSource") {
-    message.innerText = getTitle(request.source);
+    if(siteUrl.includes("workitems"))
+    message.innerText = getBranchnameForWorkitems(request.source);
   }
 });
 
-function getTitle(htmlCode) {
+function getBranchnameForWorkitems(htmlCode) {
   // return htmlCode;
 
   doc = new DOMParser().parseFromString(htmlCode, "text/html");
