@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener(function (request, sender) {
 });
 
 function getTitle(htmlCode) {
-// return htmlCode;
+  // return htmlCode;
 
   doc = new DOMParser().parseFromString(htmlCode, "text/html");
   if (typeof (doc) === 'undefined') {
@@ -15,7 +15,7 @@ function getTitle(htmlCode) {
   // Bug 3028: Crosshairs are stucked being stocked - Boards
   // Product Backlog Item 2818: Create lineup - Boards/
   var docTitle = doc.title;
-  var itemNumber = docTitle.replace( /^\D+/g, ''); // replace all leading non-digits with nothing
+  var itemNumber = docTitle.replace(/^\D+/g, ''); // replace all leading non-digits with nothing
   var withoutBoards = itemNumber.split(" - Boards")[0]
 
   var str = withoutBoards.replace(/\s+/g, '-');
@@ -37,7 +37,7 @@ function getTitle(htmlCode) {
   //   return "Hey, is it VSO/TFS/Azure Devops site you are on?"
   // }
   // popContent = new DOMParser().parseFromString(popupContentText, "text/html");
-  
+
   // elements =  popContent.getElementsByTagName("BODY");
   // // elements =  popContent.getElementsByClassName("rich-content-tooltip");
   // if(typeof(elements)==='undefined')  {
