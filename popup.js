@@ -12,7 +12,16 @@ function getTitle(htmlCode) {
     return "parser failed";
   }
 
-  return doc.title;
+  // Bug 3028: Crosshairs are stucked being stocked - Boards
+  // Product Backlog Item 2818: Create lineup - Boards/
+  var docTitle = doc.title;
+  var itemNumber = docTitle.replace( /^\D+/g, ''); // replace all leading non-digits with nothing
+  var withoutBoards = itemNumber.split(" - Boards")[0]
+
+  var str = withoutBoards.replace(/\s+/g, '-');
+  var result = str.replace(/:/g, '').toLowerCase();
+
+  return result;
 
   // popupContentText = doc.getElementsByClassName("ui-dialog-title");
 
