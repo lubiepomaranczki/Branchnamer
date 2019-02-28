@@ -45,8 +45,10 @@ function getBranchnameForTaskboard(htmlCode) {
   for (var i = 0; i < dialogTitles.length - 1; i++) {
     if (hasNumber(dialogTitles[i].innerHTML)) {
       var text = dialogTitles[i].innerHTML
-      var withoutTask = text.split("Task ")[1]
-      return removeSpacesAndReplaceDashes(withoutTask);
+      var firstDigit = text.match(/\d/) // will give you the first digit in the string
+      var n = text.indexOf(firstDigit)
+      text = text.substring(n, text.length);
+      return removeSpacesAndReplaceDashes(text);
     }
   }
 }
