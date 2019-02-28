@@ -2,7 +2,7 @@
   "name": "Branchnamer",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "TFS/VSTS/Azure devops/whatever it's name is branchname generator",
+  "description": "TFS/VSTS/Azure devops/whatever-it's-name-is branchname generator",
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "logo.png"
