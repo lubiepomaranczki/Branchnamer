@@ -4,6 +4,11 @@ Branchname is a Chrome extesion for Azure Devops that generates the name for the
 ## Example
 Let's assume you have a PBI _#3387 - Create login page_. If you click on Branchnamer logo it will open a pop up in which you will have the name of the branch `3387-create-login-page`. Simple as that.
 
+## Roadmap
+1. Design popup feature request
+2. Add branchname schema feature request up-for-grabs
+3. Automatically fill branchname when pop up is opened 
+
 ## Usage
 If you want to use it, download/clone the repository to the selected location.
 In the next step, open Chrome and tap on tree dots in a column (top right corner). Later _More tools->Extensions->Load unpacked_ and select the folder which contains the repository. Voila! You are good to go.
