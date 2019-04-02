@@ -4,10 +4,38 @@
 <head>
   <script type="text/javascript" src="bower_components/chrome-extension-async.js"></script>
   <script type="text/javascript" src="popup.js"></script>
+  <style>
+    body {
+      background-color: rgb(245, 241, 230);
+      width: 320px;
+      height: 100px;
+    }
+
+    .container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      max-width: 100%;
+      max-height: 50%;
+      overflow: auto;
+    }
+
+    .innerDiv {
+      color: rgb(28, 46, 70);
+      display: table;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 
-<body style="width: 600px; height: 300px;">
-  <p id="test">Hello word</p>
+<body>
+  <div class="container">
+    <div class="innerDiv">Branchname:</div>
+    <div class="innerDiv" style="color:rgb(28, 46, 70);font-weight:bold" id='message'>Injecting Script....</span>
+  </div>
 </body>
 
 </html>
