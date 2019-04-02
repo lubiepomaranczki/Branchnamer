@@ -2,11 +2,12 @@
 <html>
 
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="bower_components/chrome-extension-async.js"></script>
   <script type="text/javascript" src="popup.js"></script>
   <style>
     body {
-      background-color: rgb(245, 241, 230);
+      background-color: rgb (255, 255, 244);
       width: 320px;
       height: 100px;
     }
@@ -24,18 +25,20 @@
     }
 
     .innerDiv {
-      color: rgb(28, 46, 70);
+      color: rgb(19, 33, 82);
       display: table;
-      margin: 0 auto;
+      margin: 4px auto;
+      font-weight: bold;
+      font-family: "Lato";
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <div class="innerDiv">Branchname:</div>
-    <div class="innerDiv" style="color:rgb(28, 46, 70);font-weight:bold" id='message'>Injecting Script....</span>
-  </div>
+    <div class="innerDiv">BRANCHNAME:</div>
+    <div class="innerDiv" style="color:rgb(241, 98, 19)" id='message'>Injecting Script....</span>
+    </div>
 </body>
 
 </html>
