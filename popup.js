@@ -12,7 +12,10 @@ chrome.runtime.onMessage.addListener(function (request, sender) {
       message.innerText = getBranchnameForWorkitems(request.source);
     }
     else if (siteUrl.includes("taskboard")) {
-      message.innerText = getBranchnameForTaskboard(request.source);
+      message.innerText = getBranchnameFromTitle(request.source);
+    }
+    else if (siteUrl.includes("backlog")) {
+      message.innerText = getBranchnameFromTitle(request.source);
     }
   }
 });
@@ -32,7 +35,7 @@ function getBranchnameForWorkitems(htmlCode) {
   return removeSpacesAndReplaceDashes(withoutBoards);
 }
 
-function getBranchnameForTaskboard(htmlCode) {
+function getBranchnameFromTitle(htmlCode) {
 
   doc = new DOMParser().parseFromString(htmlCode, "text/html");
   if (typeof (doc) === 'undefined') {
